@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class pr01_ReadSortAndPrintArray {
@@ -13,6 +14,10 @@ public class pr01_ReadSortAndPrintArray {
             String name = reader.readLine();
             names.add(name);
         }
-        names.stream().sorted((x, y) -> x.compareTo(y)).forEach(x-> System.out.println(x));
+
+        Collections.sort(names);
+        for (int i = 0; i <names.size() ; i++) {
+            System.out.println(names.get(i));
+        }
     }
 }
